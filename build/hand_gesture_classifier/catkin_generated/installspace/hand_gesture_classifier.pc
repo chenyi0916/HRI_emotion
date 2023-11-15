@@ -1,0 +1,8 @@
+prefix=/home/ur3/HRI_emotion/install
+
+Name: hand_gesture_classifier
+Description: Description of hand_gesture_classifier
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

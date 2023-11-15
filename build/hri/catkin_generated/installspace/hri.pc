@@ -1,0 +1,8 @@
+prefix=/home/ur3/HRI_emotion/install
+
+Name: hri
+Description: Description of hri
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
