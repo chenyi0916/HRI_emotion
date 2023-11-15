@@ -10,8 +10,6 @@ roslaunch ur3_driver ur3_driver.launch
 
 ## Run the emotion detector
 ``` bash
-cd HRI_emotion
-source devel/setup.bash
 cd src/emotion/src
 rosrun emotion emotionDetector.py
 ```
