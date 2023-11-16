@@ -1,6 +1,7 @@
 # HRI_emotion
-It is a human-robot-interaction experiment based on human emotion detection
+This is a human-robot-interaction experiment based on human emotion detection
 
+Before catkin_make the workspace, remember only keep the src folder.
 ## turn on ur3 drive
 ``` bash
 cd HRI_emotion
