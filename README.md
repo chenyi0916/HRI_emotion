@@ -21,10 +21,10 @@ rosrun hri emotionFeedback.py
 ```
 
 ## Start interaction
-Step1: click the camera visualization window.
+Step1: click the camera visualization window.  
 
-Step2: make an emotion and press "p" to tell the robot.
+Step2: make an emotion and press "p" to tell the robot.  
 
-Step3: wait for robot's feedback.
+Step3: wait for robot's feedback.  
 
 Repeat: make another emotion, press "p"...
