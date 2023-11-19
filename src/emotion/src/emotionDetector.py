@@ -48,6 +48,7 @@ while not rospy.is_shutdown():
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = facecasc.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=2)
     people = bodycasc.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=2)
+    maxindex = 0
 
     # for (bx, by, bw, bh) in people:
     #     cv2.rectangle(frame, (bx, by - 50), (bx + bw, by + bh + 10), (0, 0, 255), 2)
@@ -63,13 +64,17 @@ while not rospy.is_shutdown():
     # Publish the maxindex as a ROS topic
     emotion_msg = Int32()
     emotion_msg.data = maxindex
-    pub.publish(emotion_msg)
+    
+    
 
     # Display the resulting frame
     cv2.imshow('Video', cv2.resize(frame, (640, 480), interpolation=cv2.INTER_CUBIC))
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
+    # if cv2.waitKey(1) & 0xFF == ord('q'):
+    #     break
+    if cv2.waitKey(1) & 0xFF == ord('p'):
+        pub.publish(emotion_msg)
+        print("expression published")
+  
 # When everything is done, release the capture
 cap.release()
 cv2.destroyAllWindows()
